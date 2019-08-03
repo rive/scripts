@@ -1,0 +1,29 @@
+{
+  "name": "rive",
+  "version": "0.0.1",
+  "description": "design.yaml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guoyunhe/rive.git"
+  },
+  "keywords": [
+    "design",
+    "design-system",
+    "design-language",
+    "ui",
+    "front-end",
+    "css",
+    "sass",
+    "yaml"
+  ],
+  "author": "Guo Yunhe",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/guoyunhe/rive/issues"
+  },
+  "homepage": "https://github.com/guoyunhe/rive#readme"
+}
