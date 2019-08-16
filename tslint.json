@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "member-access": false,
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false
+  },
+  "linterOptions": {
+    "exclude": ["bin", "node_modules"]
+  }
+}

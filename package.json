@@ -4,7 +4,9 @@
   "description": "design.yaml",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd test && ../bin/index.js start",
+    "build": "cd test && ../bin/index.js build",
+    "test": "cd test && ../bin/index.js test"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,35 @@
   "bugs": {
     "url": "https://github.com/guoyunhe/rive/issues"
   },
-  "homepage": "https://github.com/guoyunhe/rive#readme"
+  "homepage": "https://github.com/guoyunhe/rive#readme",
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "sass-loader": "^7.2.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-router-dom": "^4.3.4",
+    "prettier-stylelint": "^0.4.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0 || ^15.0.0",
+    "react-dom": "^16.0.0 || ^15.0.0",
+    "react-router-dom": "^5.0.0 || ^4.0.0"
+  }
 }
