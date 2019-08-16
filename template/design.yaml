@@ -1,0 +1,10 @@
+name: Foobar Design System
+codeName: FDS
+copyright: 2019 Rive Digital LTD. CO.
+authors:
+- Guo Yunhe
+- Xiao Ye
+license: WTFPL
+description: Meaningless design for a never exist website.
+version: 1.0.0 # Use Semantic Versioning https://semver.org/
+
