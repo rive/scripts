@@ -8,7 +8,7 @@ module.exports = {
     entry: path.resolve(process.cwd(), "rive.tsx"),
     output: {
         filename: "bundle.js",
-        path: path.resolve(process.cwd(), "demo-dist"),
+        path: path.resolve(process.cwd(), "rive-dist"),
         publicPath: "/"
     },
     devtool: "source-map",
@@ -16,7 +16,7 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
     devServer: {
-        contentBase: "./demo-dist",
+        contentBase: path.resolve(process.cwd(), "rive-dist"),
         host: "localhost",
         hot: true,
         open: true,
@@ -33,7 +33,11 @@ module.exports = {
                 use: ["style-loader", "css-loader", "sass-loader"]
             },
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+            {
+                test: /\.md$/,
+                use: ["raw-loader"]
+            }
         ]
     },
     plugins: [

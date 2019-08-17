@@ -1,0 +1,10 @@
+.rive-sidebar {
+    --padding-x: 0.5rem;
+    flex: 0 0 300px;
+    width: 300px;
+    background-color: #eee;
+}
+
+.rive-sidebar p {
+    text-align: center;
+}

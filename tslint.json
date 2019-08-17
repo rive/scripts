@@ -4,7 +4,8 @@
     "interface-name": [true, "never-prefix"],
     "member-access": false,
     "no-implicit-dependencies": false,
-    "no-submodule-imports": false
+    "no-submodule-imports": false,
+    "object-literal-sort-keys": false
   },
   "linterOptions": {
     "exclude": ["bin", "node_modules"]
