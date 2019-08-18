@@ -1,14 +1,11 @@
 export interface ConfigData {
-    name: string;
-    description: string;
-    copyright: string;
+    name?: string;
+    version?: string;
+    description?: string;
+    copyright?: string;
 }
 
-const configData: ConfigData = {
-    name: "fdl",
-    description: "foobar design lanaugae",
-    copyright: "2019 foobar"
-};
+const configData: ConfigData = {};
 
 export default function config(data?: ConfigData) {
     if (data) {

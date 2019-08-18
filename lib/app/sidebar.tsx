@@ -1,51 +1,65 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { config, pages } from "../";
+import config from "../config";
+import { Page, searchPages } from "../pages";
 import Search from "./search";
 import "./sidebar.css";
 
 export interface SidebarState {
-    searchValue: string;
+    query: string;
 }
 
 class Sidebar extends Component<{}, SidebarState> {
-    state: SidebarState = { searchValue: "" };
+    state: SidebarState = { query: "" };
 
-    handleSearchChange = (searchValue: string) => {
-        this.setState({ searchValue });
+    handleSearchChange = (query: string) => {
+        this.setState({ query });
     };
+
+    renderMenu(pages: Page[]) {
+        return (
+            <ul>
+                {pages.map(p => (
+                    <li key={p.path}>
+                        <NavLink exact={true} to={p.path}>
+                            {p.title}
+                        </NavLink>
+                        {p.children && this.renderMenu(p.children)}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         const configData = config();
-        const pagesData = this.state.searchValue
-            ? pages().filter(
-                  p =>
-                      p.title &&
-                      p.title
-                          .toLocaleLowerCase()
-                          .includes(this.state.searchValue.toLocaleLowerCase())
-              )
-            : pages();
+
+        const pages = searchPages(this.state.query);
+
         return (
             <aside className="rive-sidebar">
-                <p>
-                    <strong>{configData.name}</strong>
-                </p>
-                <p>{configData.description}</p>
+                <header className="rive-sidebar__header">
+                    <p>
+                        <strong className="rive-sidebar__name">
+                            {configData.name}
+                        </strong>
+                        <span className="rive-sidebar__version">
+                            {configData.version}
+                        </span>
+                    </p>
+                    <p>{configData.description}</p>
+                </header>
                 <Search
-                    value={this.state.searchValue}
+                    className="rive-sidebar__search"
+                    value={this.state.query}
                     onChange={this.handleSearchChange}
                 />
-                <ul>
-                    {pagesData.map(p => (
-                        <li key={p.path}>
-                            <NavLink exact={true} to={p.path}>
-                                {p.title}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-                <p>{configData.copyright}</p>
+                <div className="rive-sidebar__menu">
+                    {this.renderMenu(pages)}
+                </div>
+                <footer className="rive-sidebar__footer">
+                    <p>&copy; {configData.copyright}</p>
+                </footer>
             </aside>
         );
     }

@@ -1,10 +1,17 @@
 .rive-sidebar {
-    --padding-x: 0.5rem;
+    --rive-sidebar-padding-x: 0.5rem;
     flex: 0 0 300px;
+    display: flex;
     width: 300px;
     background-color: #eee;
+    flex-direction: column;
 }
 
-.rive-sidebar p {
+.rive-sidebar__header,
+.rive-sidebar__footer {
     text-align: center;
+}
+
+.rive-sidebar__menu {
+    flex: 1 1 auto;
 }

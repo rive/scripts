@@ -2,6 +2,7 @@ import React, { ChangeEvent, Component, FormEvent } from "react";
 import "./search.css";
 
 export interface SearchProps {
+    className?: string;
     value: string;
     onChange: (value: string) => void;
 }
@@ -11,21 +12,16 @@ class Search extends Component<SearchProps> {
         this.props.onChange(e.target.value);
     };
 
-    handleReset = () => {
-        this.props.onChange("");
-    };
-
     handleSubmit = (e: FormEvent) => {
         e.preventDefault();
     };
 
     render() {
-        const { value } = this.props;
+        const { className, value } = this.props;
         return (
             <form
-                className="rive-search"
+                className={["rive-search", className].join(" ")}
                 onSubmit={this.handleSubmit}
-                onReset={this.handleReset}
             >
                 <input
                     className="rive-search__input"
@@ -34,14 +30,6 @@ class Search extends Component<SearchProps> {
                     onChange={this.handleChange}
                     placeholder="Search..."
                 />
-                <button
-                    type="reset"
-                    className={`rive-search__clear ${
-                        value ? "" : "rive-search__clear--hidden"
-                    }`}
-                >
-                    &times;
-                </button>
             </form>
         );
     }

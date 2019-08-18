@@ -1,21 +1,18 @@
-import React, { FC, Fragment } from "react";
+import React, { FC } from "react";
 import { Route } from "react-router-dom";
-import { pages } from "..";
+import { getPagesFlat } from "../pages";
 
-const Content: FC = () => {
-    const pagesData = pages();
-    return (
-        <main className="rive-content">
-            {pagesData.map(p => (
-                <Route
-                    key={p.path}
-                    exact={true}
-                    path={p.path}
-                    component={p.component}
-                />
-            ))}
-        </main>
-    );
-};
+const Content: FC = () => (
+    <main className="rive-content">
+        {getPagesFlat().map(p => (
+            <Route
+                key={p.path}
+                exact={true}
+                path={p.path}
+                component={p.component}
+            />
+        ))}
+    </main>
+);
 
 export default Content;
