@@ -1,5 +1,6 @@
 .rive-sidebar {
     --rive-sidebar-padding-x: 0.5rem;
+    --rive-sidebar-indention: 1rem;
     flex: 0 0 300px;
     display: flex;
     width: 300px;
@@ -14,4 +15,16 @@
 
 .rive-sidebar__menu {
     flex: 1 1 auto;
+}
+
+.rive-sidebar__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rive-sidebar__item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }

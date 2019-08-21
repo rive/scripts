@@ -1,0 +1,30 @@
+.rive-menu__item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.rive-menu__toggle {
+    box-sizing: border-box;
+    display: inline-flex;
+    width: var(--rive-menu-toggle-size);
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.rive-menu__toggle--open:before,
+.rive-menu__toggle--close:before {
+    content: "";
+    display: block;
+    border-top: var(--rive-menu-toggle-icon-size) solid transparent;
+    border-bottom: var(--rive-menu-toggle-icon-size) solid transparent;
+    border-left: var(--rive-menu-toggle-icon-size) solid currentColor;
+    transition: transform 0.2s ease-in-out;
+}
+
+.rive-menu__toggle--open:before {
+    transform: rotate(90deg);
+}

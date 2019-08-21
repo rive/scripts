@@ -1,0 +1,9 @@
+.rive-menu {
+    --rive-menu-indention: 1rem;
+    --rive-menu-padding-x: 0.5rem;
+    --rive-menu-toggle-size: 1rem;
+    --rive-menu-toggle-icon-size: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
