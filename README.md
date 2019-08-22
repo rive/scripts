@@ -21,10 +21,34 @@ optional for typescript project:
 npm install --save-dev typescript @types/react @types/react-dom @types/react-router-dom
 ```
 
+create `tsconfig.json`:
+
+```json
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es5"
+    },
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
+```
+
 create `rive.jsx` or `rive.tsx`:
 
 ```jsx
-import React from 'react';
+import React from "react";
 import rive from "@rive/react";
 import ButtonDoc from "./components/button/doc";
 import ButtonDefault from "./components/button/cases/default";

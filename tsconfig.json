@@ -15,6 +15,5 @@
     "strict": true,
     "target": "es5"
   },
-  "exclude": ["bin", "node_modules", "**/*.spec.ts"],
-  "include": ["global.d.ts", "lib", "test"]
+  "exclude": ["bin", "node_modules", "**/*.spec.ts"]
 }
