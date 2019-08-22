@@ -23,7 +23,21 @@ export default class Menu extends Component<MenuProps> {
         toggles: {}
     };
 
+    componentDidMount() {
+        this.props.pages.forEach(page => {
+            if (location.pathname.indexOf(page.path) > -1) {
+                this.open(page.path);
+            }
+        });
+    }
+
     isOpen = (path: string) => this.state.toggles[path];
+
+    open = (path: string) => {
+        const toggles = this.state.toggles;
+        toggles[path] = true;
+        this.setState({ toggles });
+    };
 
     toggle = (path: string) => {
         const toggles = this.state.toggles;
