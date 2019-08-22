@@ -1,8 +1,8 @@
 {
-  "name": "rive",
+  "name": "@rive/react",
   "version": "0.0.1",
-  "description": "design.yaml",
-  "main": "index.js",
+  "description": "create react based design system",
+  "main": "lib/index.ts",
   "scripts": {
     "start": "cd test && ../bin/index.js start",
     "build": "cd test && ../bin/index.js build",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guoyunhe/rive.git"
+    "url": "git+https://github.com/rive/react.git"
   },
   "keywords": [
     "design",
@@ -18,23 +18,23 @@
     "design-language",
     "ui",
     "front-end",
-    "css",
-    "sass",
-    "yaml"
+    "react"
   ],
   "author": "Guo Yunhe",
-  "license": "GPL-3.0",
+  "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/guoyunhe/rive/issues"
+    "url": "https://github.com/rive/react/issues"
   },
-  "homepage": "https://github.com/guoyunhe/rive#readme",
+  "homepage": "https://github.com/rive/react#readme",
+  "bin": {
+    "rive-react": "./bin/index.js"
+  },
   "dependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
     "raw-loader": "^3.1.0",
-    "react-markdown": "^4.1.0",
     "sass-loader": "^7.2.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.0",
@@ -48,6 +48,7 @@
     "prettier-stylelint": "^0.4.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-markdown": "^4.1.0",
     "react-router-dom": "^5.0.1",
     "stylelint-config-recommended": "^2.2.0",
     "tslint": "^5.18.0",

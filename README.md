@@ -1,4 +1,4 @@
-# rive
+# rive react
 
 rive is a tool to generate documents for design languges and design systems. it
 is designed for react. features:
@@ -9,18 +9,16 @@ is designed for react. features:
 
 ## setup
 
-install `rive` package:
+install `@rive/react` package:
 
 ```bash
-npm install --save-dev rive
+npm install --save-dev @rive/react
 ```
 
-create `rive.jsx`:
+create `rive.jsx` or `rive.tsx`:
 
 ```jsx
-import rive from "rive";
-import Markdown from "react-markdown";
-import about from "./docs/about.md";
+import rive from "@rive/react";
 import ButtonDoc from "./components/button/doc";
 import ButtonDefault from "./components/button/cases/default";
 
@@ -34,20 +32,21 @@ rive.config({
 rive.addPage({
     path: "/about",
     title: "About",
-    content: <Markdown source={about} />
+    component: () => <div>Foo is not Bar.</div>
 });
 
 // Add React component as page
 rive.addPage({
     path: "/components/button",
     title: "Button",
-    content: <ButtonDoc />
+    component: ButtonDoc
 });
 
 // Add visual test case
 rive.addCase({
     path: "/components/button/default",
-    content: <ButtonDefault />,
+    title: "Default Button",
+    component: ButtonDefault,
     width: 300,
     height: 100
 });
@@ -60,9 +59,9 @@ modify `package.json`
 ```json
 {
     "scripts": {
-        "start": "rive start",
-        "build": "rive build",
-        "test": "rive test"
+        "start": "rive-react start",
+        "build": "rive-react build",
+        "test": "rive-react test"
     }
 }
 ```
