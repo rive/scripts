@@ -9,15 +9,22 @@ is designed for react. features:
 
 ## setup
 
-install `@rive/react` package:
+install packages:
 
 ```bash
-npm install --save-dev @rive/react
+npm install --save-dev @rive/react react react-dom react-router-dom
+```
+
+optional for typescript project:
+
+```bash
+npm install --save-dev typescript @types/react @types/react-dom @types/react-router-dom
 ```
 
 create `rive.jsx` or `rive.tsx`:
 
 ```jsx
+import React from 'react';
 import rive from "@rive/react";
 import ButtonDoc from "./components/button/doc";
 import ButtonDefault from "./components/button/cases/default";
