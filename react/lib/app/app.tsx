@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./app.css";
+import { BrowserRouter as Router } from "react-router-dom";
 import Content from "./content";
 import Sidebar from "./sidebar";
 

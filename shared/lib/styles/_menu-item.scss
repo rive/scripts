@@ -2,12 +2,19 @@
     display: block;
     text-decoration: none;
     color: inherit;
+    padding: 0 $rive-sidebar-padding-x;
+}
+
+@for $level from 0 through 5 {
+    .rive-menu__item--level-#{$level} {
+        padding-left: $rive-sidebar-padding-x + $rive-menu-indention * $level;
+    }
 }
 
 .rive-menu__toggle {
     box-sizing: border-box;
     display: inline-flex;
-    width: var(--rive-menu-toggle-size);
+    width: $rive-menu-toggle-size;
     text-align: center;
     vertical-align: center;
     position: relative;
@@ -19,9 +26,9 @@
 .rive-menu__toggle--close:before {
     content: "";
     display: block;
-    border-top: var(--rive-menu-toggle-icon-size) solid transparent;
-    border-bottom: var(--rive-menu-toggle-icon-size) solid transparent;
-    border-left: var(--rive-menu-toggle-icon-size) solid currentColor;
+    border-top: $rive-menu-toggle-icon-size solid transparent;
+    border-bottom: $rive-menu-toggle-icon-size solid transparent;
+    border-left: $rive-menu-toggle-icon-size solid currentColor;
     transition: transform 0.2s ease-in-out;
 }
 

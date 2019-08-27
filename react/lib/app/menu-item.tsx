@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { Page } from "../pages";
-import "./menu-item.css";
 
 export interface MenuItemProps {
     page: Page;
@@ -11,6 +10,10 @@ export interface MenuItemProps {
 }
 
 export default class MenuItem extends Component<MenuItemProps> {
+    static defaultProps = {
+        level: 0
+    };
+
     handleClick = () => {
         this.props.toggle(this.props.page.path);
     };
@@ -31,11 +34,9 @@ export default class MenuItem extends Component<MenuItemProps> {
                 to={page.path}
                 className={[
                     "rive-menu__item",
+                    "rive-menu__item--level-" + level,
                     isOpen ? "rive-menu__item--open" : ""
                 ].join(" ")}
-                style={{
-                    paddingLeft: `calc(${level} * var(--rive-menu-indention) + var(--rive-menu-padding-x))`
-                }}
                 onClick={this.handleClick}
             >
                 <span

@@ -1,10 +1,8 @@
-import React, { Component, Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component } from "react";
 import config from "../config";
-import { Page, searchPages } from "../pages";
+import { searchPages } from "../pages";
 import Menu from "./menu";
 import Search from "./search";
-import "./sidebar.css";
 
 export interface SidebarState {
     query: string;

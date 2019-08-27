@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { NavLink } from "react-router-dom";
 import { Page } from "../pages";
 import MenuItem from "./menu-item";
-import "./menu.css";
 
 export interface MenuProps {
     className?: string;

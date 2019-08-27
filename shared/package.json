@@ -1,0 +1,35 @@
+{
+  "name": "@rive/shared",
+  "version": "0.0.2",
+  "description": "shared styles and scripts of rive",
+  "main": "lib/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rive/rive.git"
+  },
+  "keywords": [
+    "design",
+    "design-system",
+    "design-language",
+    "ui",
+    "front-end",
+    "styles",
+    "css",
+    "sass"
+  ],
+  "author": "Guo Yunhe",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rive/rive/issues"
+  },
+  "homepage": "https://github.com/rive/rive#readme",
+  "devDependencies": {
+    "prettier-stylelint": "^0.4.2",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-scss": "^3.10.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  }
+}

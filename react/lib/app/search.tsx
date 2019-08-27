@@ -1,5 +1,4 @@
 import React, { ChangeEvent, Component, FormEvent } from "react";
-import "./search.css";
 
 export interface SearchProps {
     className?: string;
