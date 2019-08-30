@@ -7,6 +7,11 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### changed
+
+-   shared: improve sidebar styles
+-   react: update dependencies
+
 ## [0.0.3] - 2019-08-30
 
 ### changed

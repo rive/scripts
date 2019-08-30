@@ -3,6 +3,17 @@
     text-decoration: none;
     color: inherit;
     padding: 0 $rive-sidebar-padding-x;
+
+    @media screen and (pointer: fine) {
+        &:hover {
+            background: $rive-menu-hover-background;
+        }
+    }
+
+    &:active,
+    &.active {
+        background: $rive-menu-active-background;
+    }
 }
 
 @for $level from 0 through 5 {
@@ -12,26 +23,15 @@
 }
 
 .rive-menu__toggle {
-    box-sizing: border-box;
-    display: inline-flex;
+    display: inline-block;
     width: $rive-menu-toggle-size;
     text-align: center;
-    vertical-align: center;
-    position: relative;
-    justify-content: center;
-    align-items: center;
 }
 
-.rive-menu__toggle--open:before,
 .rive-menu__toggle--close:before {
-    content: "";
-    display: block;
-    border-top: $rive-menu-toggle-icon-size solid transparent;
-    border-bottom: $rive-menu-toggle-icon-size solid transparent;
-    border-left: $rive-menu-toggle-icon-size solid currentColor;
-    transition: transform 0.2s ease-in-out;
+    content: "▹";
 }
 
 .rive-menu__toggle--open:before {
-    transform: rotate(90deg);
+    content: "▿";
 }

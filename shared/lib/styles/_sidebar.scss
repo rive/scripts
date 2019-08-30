@@ -1,9 +1,13 @@
 .rive-sidebar {
-    flex: 0 0 300px;
+    flex: 0 0 $rive-sidebar-width;
     display: flex;
-    width: 300px;
+    width: $rive-sidebar-width;
     background-color: #eee;
     flex-direction: column;
+
+    > *:not(:last-child) {
+        margin-bottom: $rive-sidebar-space;
+    }
 }
 
 .rive-sidebar__header,

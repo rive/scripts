@@ -1,8 +1,10 @@
 // sidebar
 // =======
 
-$rive-sidebar-padding-x: 0.5rem;
-$rive-sidebar-padding-y: 0;
+$rive-sidebar-padding-x: 0.5rem !default;
+$rive-sidebar-padding-y: 0 !default;
+$rive-sidebar-width: 300px !default;
+$rive-sidebar-space: 1rem !default;
 
 // menu
 // ====
@@ -10,4 +12,5 @@ $rive-sidebar-padding-y: 0;
 $rive-menu-indention: 1rem !default;
 $rive-menu-padding-x: 0.5rem !default;
 $rive-menu-toggle-size: 1rem !default;
-$rive-menu-toggle-icon-size: 0.35rem !default;
+$rive-menu-hover-background: rgba(0, 0, 0, 0.05) !default;
+$rive-menu-active-background: rgba(0, 0, 0, 0.1) !default;
