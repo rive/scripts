@@ -7,6 +7,8 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## [0.0.4] - 2019-08-30
+
 ### changed
 
 -   shared: improve sidebar styles
@@ -30,7 +32,8 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 -   react: webpack scripts
 
-[unreleased]: https://github.com/rive/rive/compare/v0.0.3...HEAD
+[unreleased]: https://github.com/rive/rive/compare/v0.0.4...HEAD
+[0.0.4]: https://github.com/rive/rive/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/rive/rive/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/rive/rive/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/rive/rive/releases/tag/v0.0.1
