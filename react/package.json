@@ -1,6 +1,6 @@
 {
   "name": "@rive/react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create react based design system",
   "main": "lib/index.ts",
   "scripts": {
