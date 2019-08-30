@@ -31,5 +31,9 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "webpack": "^4.39.3",
+    "webpack-dev-server": "^3.8.0"
   }
 }

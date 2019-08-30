@@ -1,10 +1,8 @@
-import { ComponentType } from "react";
-
-export interface Page {
+export interface Page<C> {
     /** react router path, must be unique */
     path: string;
     /** any kind of react content to render */
-    component: ComponentType;
+    component: C;
     /** page title. will be part of html title, too */
     title: string;
     /** control viewport for visual tests */
@@ -12,24 +10,24 @@ export interface Page {
     /** control viewport for visual tests */
     height?: number;
     /** nested pages */
-    children?: Page[];
+    children?: Array<Page<C>>;
 }
 
-const pageStore: { [path: string]: Page } = {};
+const pageStore: { [path: string]: Page<any> } = {};
 
 /**
  * get pages in nested structure.
  */
-export function getPages(): Page[] {
+export function getPages<C>(): Array<Page<C>> {
     return Object.keys(pageStore)
         .filter(path => path.lastIndexOf("/") === 0)
-        .map(getPage);
+        .map(p => getPage<C>(p));
 }
 
 /**
  * get pages in flatten structure.
  */
-export function getPagesFlat(): Page[] {
+export function getPagesFlat<C>(): Array<Page<C>> {
     return Object.values(pageStore);
 }
 
@@ -38,13 +36,13 @@ export function getPagesFlat(): Page[] {
  *
  * @param path router path to the page
  */
-export function getPage(path: string): Page {
+export function getPage<C>(path: string): Page<C> {
     const page = pageStore[path];
     page.children = Object.keys(pageStore)
         .filter(
             p => p.indexOf(path) === 0 && p.lastIndexOf("/") === path.length
         )
-        .map(p => getPage(p));
+        .map(p => getPage<C>(p));
     return page;
 }
 
@@ -54,8 +52,8 @@ export function getPage(path: string): Page {
  *
  * @param query search query
  */
-export function searchPages(query: string): Page[] {
-    const pages = getPages();
+export function searchPages<C>(query: string): Array<Page<C>> {
+    const pages = getPages<C>();
     const keywords = query
         .trim()
         .toLocaleLowerCase()
@@ -73,7 +71,10 @@ export function searchPages(query: string): Page[] {
  * @param pages page tree to be searched
  * @param keywords keywords array
  */
-function depthFilter(pages: Page[], keywords: string[]): Page[] {
+function depthFilter<C>(
+    pages: Array<Page<C>>,
+    keywords: string[]
+): Array<Page<C>> {
     return pages
         .filter(p => depthSearch(p, keywords))
         .map(p => ({
@@ -88,7 +89,7 @@ function depthFilter(pages: Page[], keywords: string[]): Page[] {
  * @param page page to be search
  * @param keywords keywords array
  */
-function depthSearch(page: Page, keywords: string[]): boolean {
+function depthSearch<C>(page: Page<C>, keywords: string[]): boolean {
     const result = keywords.reduce(
         (pv: boolean, cv) => pv && page.title.toLocaleLowerCase().includes(cv),
         true
@@ -114,7 +115,7 @@ function depthSearch(page: Page, keywords: string[]): boolean {
  *
  * @param page page data
  */
-export function addPage(page: Page) {
+export function addPage<C>(page: Page<C>) {
     pageStore[page.path] = page;
 }
 

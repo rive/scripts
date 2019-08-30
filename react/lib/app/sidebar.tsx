@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import config from "../config";
-import { searchPages } from "../pages";
+import config from "@rive//shared/lib/config";
+import { searchPages } from "@rive/shared/lib/pages";
+import React, { Component, ComponentType } from "react";
 import Menu from "./menu";
 import Search from "./search";
 
@@ -18,7 +18,7 @@ class Sidebar extends Component<{}, SidebarState> {
     render() {
         const configData = config();
 
-        const pages = searchPages(this.state.query);
+        const pages = searchPages<ComponentType>(this.state.query);
 
         return (
             <aside className="rive-sidebar">

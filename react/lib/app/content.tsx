@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import { getPagesFlat } from "@rive/shared/lib/pages";
+import React, { ComponentType, FC } from "react";
 import { Route } from "react-router-dom";
-import { getPagesFlat } from "../pages";
 
 const Content: FC = () => (
     <main className="rive-content">
-        {getPagesFlat().map(p => (
+        {getPagesFlat<ComponentType>().map(p => (
             <Route
                 key={p.path}
                 exact={true}

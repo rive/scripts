@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import { Page } from "@rive/shared/lib/pages";
+import React, { Component, ComponentType } from "react";
 import { NavLink } from "react-router-dom";
-import { Page } from "../pages";
 
 export interface MenuItemProps {
-    page: Page;
+    page: Page<ComponentType>;
     level: number;
     isOpen: boolean;
     toggle: (path: string) => void;

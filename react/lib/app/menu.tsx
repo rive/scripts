@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from "react";
-import { Page } from "../pages";
+import { Page } from "@rive/shared/lib/pages";
+import React, { Component, ComponentType, Fragment } from "react";
 import MenuItem from "./menu-item";
 
 export interface MenuProps {
     className?: string;
-    pages: Page[];
+    pages: Array<Page<ComponentType>>;
     level?: number;
 }
 

@@ -2,11 +2,15 @@
 
 const Webpack = require("webpack");
 const WebpackDevServer = require("webpack-dev-server");
-const config = require("./webpack.config");
 
-module.exports = function () {
+/**
+ * start web app
+ *
+ * @param {object} config webpack configuration
+ */
+module.exports = function(config) {
     const compiler = Webpack(config);
-    const port = process.env.PORT || 8080;
+    const port = process.env.PORT || config.devServer.port || 8080;
 
     WebpackDevServer.addDevServerEntrypoints(config, config.devServer);
 
@@ -15,4 +19,4 @@ module.exports = function () {
     server.listen(port, "127.0.0.1", () => {
         console.log("starting rive server on http://localhost:" + port);
     });
-}
+};
