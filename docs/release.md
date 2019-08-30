@@ -19,6 +19,10 @@ edit each `package.json` in sub-folders:
 
 move all entries under **unreleased** to **1.2.3**.
 
+## git commit
+
+commit message should be `version 1.2.3`.
+
 ## create tag and release on github
 
 version tag should be like `v1.2.3`.
