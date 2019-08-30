@@ -7,6 +7,10 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### changed
+
+-   shared: change content width and avoid overflow
+
 ## [0.0.4] - 2019-08-30
 
 ### changed
