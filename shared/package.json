@@ -24,8 +24,9 @@
   },
   "homepage": "https://github.com/rive/rive#readme",
   "devDependencies": {
-    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
+    "stylelint-prettier": "^1.1.1",
     "stylelint-scss": "^3.10.0",
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
