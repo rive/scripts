@@ -2,7 +2,8 @@
     flex: 0 0 $rive-sidebar-width;
     display: flex;
     width: $rive-sidebar-width;
-    background-color: #eee;
+    background: $rive-sidebar-background;
+    color: $rive-sidebar-text-color;
     flex-direction: column;
 
     > *:not(:last-child) {
@@ -19,14 +20,17 @@
     flex: 1 1 auto;
 }
 
-.rive-sidebar__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.rive-sidebar__modes {
+    display: flex;
+
+    > .rive-button {
+        flex: 1 1 50%;
+    }
 }
 
-.rive-sidebar__item {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+.dark-mode {
+    .rive-sidebar {
+        background: $rive-dark-mode-sidebar-background;
+        color: $rive-dark-mode-sidebar-text-color;
+    }
 }

@@ -7,11 +7,15 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### added
+
+-   shared, react: color blind mode and dark mode
+
 ## [0.0.6] - 2019-09-01
 
 ### changed
 
--   shared: move webpack loaders and plugins to shared
+-   shared, react: move webpack loaders and plugins to shared
 
 ## [0.0.5] - 2019-08-30
 

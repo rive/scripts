@@ -1,0 +1,31 @@
+.rive-button {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+@media screen and (pointer: fine) {
+    .rive-button:hover {
+        background-color: $rive-sidebar-hover-background;
+    }
+}
+
+.rive-button:active,
+.rive-button.active {
+    background-color: $rive-sidebar-active-background;
+}
+
+.dark-mode {
+    @media screen and (pointer: fine) {
+        .rive-button:hover {
+            background-color: $rive-dark-mode-sidebar-hover-background;
+        }
+    }
+
+    .rive-button:active,
+    .rive-button.active {
+        background-color: $rive-dark-mode-sidebar-active-background;
+    }
+}

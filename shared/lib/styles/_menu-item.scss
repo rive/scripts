@@ -6,13 +6,13 @@
 
     @media screen and (pointer: fine) {
         &:hover {
-            background: $rive-menu-hover-background;
+            background: $rive-sidebar-hover-background;
         }
     }
 
     &:active,
     &.active {
-        background: $rive-menu-active-background;
+        background: $rive-sidebar-active-background;
     }
 }
 
@@ -34,4 +34,19 @@
 
 .rive-menu__toggle--open:before {
     content: "▿";
+}
+
+.dark-mode {
+    .rive-menu__item {
+        @media screen and (pointer: fine) {
+            &:hover {
+                background: $rive-dark-mode-sidebar-hover-background;
+            }
+        }
+
+        &:active,
+        &.active {
+            background: $rive-dark-mode-sidebar-active-background;
+        }
+    }
 }

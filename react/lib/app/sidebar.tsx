@@ -1,6 +1,8 @@
 import config from "@rive//shared/lib/config";
 import { searchPages } from "@rive/shared/lib/pages";
 import React, { Component, ComponentType } from "react";
+import ColorBlindModeButton from "./color-blind-mode-button";
+import DarkModeButton from "./dark-mode-button";
 import Menu from "./menu";
 import Search from "./search";
 
@@ -39,6 +41,10 @@ class Sidebar extends Component<{}, SidebarState> {
                     onChange={this.handleSearchChange}
                 />
                 <Menu className="rive-sidebar__menu" pages={pages} />
+                <div className="rive-sidebar__modes">
+                    <ColorBlindModeButton />
+                    <DarkModeButton />
+                </div>
                 <footer className="rive-sidebar__footer">
                     <p>&copy; {configData.copyright}</p>
                 </footer>
