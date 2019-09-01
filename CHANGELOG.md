@@ -7,6 +7,10 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### changed
+
+-   shared: move webpack loaders and plugins to shared
+
 ## [0.0.5] - 2019-08-30
 
 ### changed
