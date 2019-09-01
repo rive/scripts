@@ -11,6 +11,10 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 -   shared, react: color blind mode and dark mode
 
+### changed
+
+-   shared: sidebar font size
+
 ## [0.0.6] - 2019-09-01
 
 ### changed

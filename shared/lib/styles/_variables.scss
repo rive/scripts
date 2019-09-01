@@ -11,14 +11,16 @@ $rive-dark-mode-sidebar-background: #333333 !default;
 $rive-dark-mode-sidebar-hover-background: rgba(255, 255, 255, 0.05) !default;
 $rive-dark-mode-sidebar-active-background: rgba(255, 255, 255, 0.1) !default;
 
-$rive-sidebar-padding-x: 0.5rem !default;
+$rive-sidebar-font-size: 14px;
+
+$rive-sidebar-padding-x: 14px !default;
 $rive-sidebar-padding-y: 0 !default;
 $rive-sidebar-width: 300px !default;
-$rive-sidebar-space: 1rem !default;
+$rive-sidebar-space: 14px !default;
 
 // menu
 // ====
 
-$rive-menu-indention: 1rem !default;
-$rive-menu-padding-x: 0.5rem !default;
-$rive-menu-toggle-size: 1rem !default;
+$rive-menu-indention: 14px !default;
+$rive-menu-padding-x: 14px !default;
+$rive-menu-toggle-size: 14px !default;
