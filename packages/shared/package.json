@@ -1,6 +1,6 @@
 {
   "name": "@rive/shared",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "shared styles and scripts of rive",
   "main": "lib/index.ts",
   "repository": {
@@ -23,7 +23,6 @@
     "url": "https://github.com/rive/rive/issues"
   },
   "homepage": "https://github.com/rive/rive#readme",
-  "devDependencies": {},
   "dependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",

@@ -1,6 +1,6 @@
 {
   "name": "@rive/react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "create react based design system",
   "main": "lib/index.ts",
   "scripts": {
@@ -30,7 +30,7 @@
     "rive-react": "./bin/index.js"
   },
   "dependencies": {
-    "@rive/shared": "0.0.5"
+    "@rive/shared": "^0.0.6"
   },
   "devDependencies": {
     "@types/react": "^16.9.2",
